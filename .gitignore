@@ -1,0 +1,4 @@
+!.gitignore
+
+odoo/student-management-addons/student_management/__pycache__
+odoo/student-management-addons/student_management/models/__pycache__
