@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+        <record id="student_report_view_kanban" model="ir.ui.view">
+            <field name="name">student.report.view.kanban</field>
+            <field name="model">student.report</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <templates>
+                        <t t-name="kanban-box" >
+                            <div class="oe_kanban_global_click">
+                                <b>First Terminal</b>
+                                <div>
+                                    Name: <b><field name="student_name"></field></b>
+                                </div>
+                                <div>
+                                    Maths: <field name="maths"></field>
+                                </div>
+                                <div>
+                                    Science: <field name="science"></field>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="student_report_view_tree" model="ir.ui.view">
+            <field name="name">student.report.view.tree</field>
+            <field name="model">student.report</field>
+            <field name="arch" type="xml">
+                <tree string="Tree View" editable="bottom">
+                    <field name="student_name"></field>
+                    <field name="maths"></field>
+                    <field name="science"></field>
+                    <field name="english"></field>
+                    <field name="nepali"></field>
+                    <field name="computer"></field>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="student_report_action" model="ir.actions.act_window">
+            <field name="name">Terminal Report Card</field>
+            <field name="res_model">student.report</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <menuitem
+            id="student_report_menu"
+            name="Student Report"
+            parent="student_management.student_management_root_menu"
+            action="student_report_action"
+        />
+    </data>
+    
+
+</odoo>

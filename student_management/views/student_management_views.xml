@@ -53,21 +53,14 @@
 
         <menuitem
             id="student_management_root_menu"
-            name="Student Info"
+            name="Information"
         />
 
         <menuitem
             id="student_management_students_menu"
             name="Students"
             parent="student_management_root_menu"
-        />
-
-        <menuitem
-            id="student_management_info_menu"
-            name="Information"
-            parent="student_management_students_menu"
             action="student_management_action"
-            sequence="1"
         />
     </data>
 </odoo>
